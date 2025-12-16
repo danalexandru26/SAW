@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>
+        Quotations in HTML
+    </title>
+</head>
+
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: 300px;
+        width: 50%;
+    }
+
+    .paragraph-align {
+        display: block;
+        margin-left: 340px;
+        margin-right: 200px;
+        width: 60%;
+    }
+
+    .preformatted-text {
+        display: block;
+        text-align: center;
+    }
+
+    .preformatted-paragraph-align {
+        display: block;
+        margin-left: 550px;
+        margin-right: 200px;
+        width: 50%;
+    }
+
+    .image-center {
+        display: block;
+        margin-left: 380px;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .figure-caption {
+        font-style: italic;
+        font-size: small;
+        text-align: center;
+    }
+
+    .figure-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<body>
+    <h1 class="center">Quotations and other interesting things</h1>
+    <hr>
+    <p class="paragraph-align">This web paeg will cover several examples of how we may employ the use of simple
+        quotation tags. Furthermore, in the tone of my stylistic tastes, artpieces will serve as a support for learning
+        many the many intricacies of this markup langauge. There exists a platitude of tags we can use when dealing with
+        quotations. We could even design our own bespoke tag styles if we felt that adventurous. Alas, the two tags
+        we'll go over in this web page are &lt;blockquote&gt; and &lt;q&gt;.</p>
+    <br>
+    <p class="paragraph-align">In the style of our previous pages, we shall quote a wikipedia page on a fundamental
+        detail of art history that regards the introduction of haiku poetry to the western world.</p>
+    <blockquote class="paragraph-align" cite="https://en.wikipedia.org/wiki/Haiku">
+        Haiku (俳句, haiku) is a very short form of Japanese poetry typically characterized by three qualities:
+        <ul>
+            <li>the essence of haiku is "cutting" (kiru),</li>
+            <li>a kireji ("cutting word") juxtaposing two images or ideas,</li>
+            <li>and a seasonal reference (kigo).</li>
+        </ul>
+        Haiku poetry was introduced to the West in the late 19th century by the Japanese writer <em>Masaoka Shiki</em>.
+    </blockquote>
+
+    <figure>
+        <a href="https://en.wikipedia.org/wiki/Hasui_Kawase" target="_blank"><img class="figure-image "
+                src="images/kawase_zo.jpg" style="height:400px;width:300px;" alt="Art by Kawase Hasui"></a>
+        <figcaption class="figure-caption">Zōjō-ji in Shiba, 1925. From series Twenty Views of Tōkyō.</figcaption>
+    </figure>
+
+    <p class="paragraph-align"> And now, for a closing note, let's delight in a thematic quote.</p>
+    <pr class="preformatted-text">
+        冬来りなば春遠からじ
+    </pr>
+    <br>
+    <div class="preformatted-text">
+        <q><em>If winter has come, then spring must not be far away.</em></q> – Unknown
+    </div>
+</body>
+
+</html>
