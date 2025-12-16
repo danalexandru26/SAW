@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        Formatting and Paragraphs in HTML
+    </title>
+
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: 300px;
+            width: 50%;
+        }
+
+        .paragraph-align {
+            display: block;
+            margin-left: 300px;
+            margin-right: 200px;
+            width: 60%;
+        }
+
+        .preformatted-text {
+            display: block;
+            margin-left: 650px;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .preformatted-paragraph-align {
+            display: block;
+            margin-left: 550px;
+            margin-right: 200px;
+            width: 50%;
+        }
+
+        .image-center {
+            display: block;
+            margin-left: 380px;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<h1 class="center">Paragrahs and Formatting in HTML</h1>
+<hr>
+<br>
+<p1 class="paragraph-align"> Throughout the contents of this sample web page we will go over the basic methods of
+    formatting and declaring custom html paragraphs. You may already have noticed the interestingly placed horizontal
+    line right below our title header declaration. This was done with a simple formatting specifier identified by the
+    tag &lt;hr&gt;. Furthermore, our paragraph is displayed one line lower than it normally would. This white space can
+    be inserted by using the &lt;br&gt; tag.</p1>
+<br>
+<p class="paragraph-align">We can also insert raw pre-formatted text into our web page by using then &lt;pre&gt; tag.
+    Naturally, <i>pre</i> stands for preformatted. We can see an example of the usage of this tag below.</p>
+
+<br>
+<pre class="preformatted-text">
+    古池や蛙飛び込む水の音
+    
+    ふるいけやかわずとびこむみずのおと
+
+    furu ike ya kawazu tobikomu mizu no oto
+
+</pre>
+
+<p class="preformatted-paragraph-align">This is a famous japanese haiku poem that roughly translates to the following:
+</p>
+<br>
+<pre class="preformatted-text">
+    An old silent pond...
+
+    A frog jumps into the pond—
+
+    Splash! Silence again.
+</pre>
+<br>
+<img src="images/haikuArt.jpg" alt="Art for the haiku poem" class=image-center height="400px" width="250px">
+
+</html>
