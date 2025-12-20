@@ -46,11 +46,15 @@
 
         <h2 style="text-align: center;font-style: italic;">HTML Lists</h2>
 
-        <p>We will start with lists because they are a straightforward and fundamental topic. Additionally, we've already
+        <p>We will start with lists because they are a straightforward and fundamental topic. Additionally, we've
+            already
             used them in previous explanatory pages. There are two main types of lists in HTML: ordered and unordered.
-            Ordered lists number their items; unordered lists use bullet points. Unordered and ordered lists are declared
-            with <span style="color:maroon">&lt;ul&gt;</span> and <span style="color:maroon">&lt;ol&gt;</span>, respectively. List items are declared with the
-            <span style="color:maroon">&lt;li&gt;</span> tag.</p>
+            Ordered lists number their items; unordered lists use bullet points. Unordered and ordered lists are
+            declared
+            with <span style="color:maroon">&lt;ul&gt;</span> and <span style="color:maroon">&lt;ol&gt;</span>,
+            respectively. List items are declared with the
+            <span style="color:maroon">&lt;li&gt;</span> tag.
+        </p>
 
         <pre class="example-box" style="text-align: center;">
 &lt;!-- This is an unordered list --&gt;
@@ -69,8 +73,10 @@
         </pre>
 
         <p>There is also a special type of list called a definition list, used to define terms and their corresponding
-            definitions. Definition lists are declared with <span style="color:maroon">&lt;dl&gt;</span>, while terms and definitions are
-            declared with <span style="color:maroon">&lt;dt&gt;</span> and <span style="color:maroon">&lt;dd&gt;</span>, respectively. An example is shown below.</p>
+            definitions. Definition lists are declared with <span style="color:maroon">&lt;dl&gt;</span>, while terms
+            and definitions are
+            declared with <span style="color:maroon">&lt;dt&gt;</span> and <span style="color:maroon">&lt;dd&gt;</span>,
+            respectively. An example is shown below.</p>
         <pre class="example-box" style="text-align: center;">
 &lt;!-- This is a definition list --&gt;
 &lt;dl&gt;
@@ -85,33 +91,42 @@
         <p>Before jumping straight into CSS, it's worth presenting the concept of inline vs. block elements in HTML.
             This property specifies an element's default display behavior in the browser. Block elements are, by
             default, full-width. Browsers generally add vertical spacing before and after block elements. The most
-            common block elements are <span style="color:maroon">&lt;div&gt;</span> and <span style="color:maroon">&lt;p&gt;</span>.</p>
+            common block elements are <span style="color:maroon">&lt;div&gt;</span> and <span
+                style="color:maroon">&lt;p&gt;</span>.</p>
         <p>Inline elements, on the other hand, are only as wide as their content and do not force line breaks. The most
-            common inline elements are <span style="color:maroon">&lt;span&gt;</span> and <span style="color:maroon">&lt;a&gt;</span>.</p>
+            common inline elements are <span style="color:maroon">&lt;span&gt;</span> and <span
+                style="color:maroon">&lt;a&gt;</span>.</p>
 
         <h2 style="text-align:center;font-style: italic;">A brief look into CSS</h2>
 
         <p>We will now take a look at CSS and how it can improve the appearance of our web pages. CSS stands for
             <i>Cascading Style Sheets</i>. It is called "cascading" because styles applied to a parent element can be
             inherited by its children. A simple example is the centering used in this document. CSS can change text
-            alignment, colors, borders, dimensions, and much more.</p>
+            alignment, colors, borders, dimensions, and much more.
+        </p>
 
         <h2 style="text-align: center;font-style: italic;">Using CSS</h2>
 
         <p>There are three main ways to use CSS in an HTML document:</p>
         <ul>
-            <li><span style="color:darkred">Inline CSS</span> — apply style to a single element using the <code>style</code> attribute.</li>
-            <li><span style="color:darkred">Internal CSS</span> — define CSS rules inside a <span style="color:maroon">&lt;style&gt;</span> tag in the
-                <span style="color:maroon">&lt;head&gt;</span> for use within the same document.</li>
-            <li><span style="color:darkred">External CSS</span> — place styles in a separate <code>.css</code> file and link it with
-                <span style="color:maroon">&lt;link&gt;</span> in the <span style="color:maroon">&lt;head&gt;</span>.</li>
+            <li><span style="color:darkred">Inline CSS</span> — apply style to a single element using the
+                <code>style</code> attribute.</li>
+            <li><span style="color:darkred">Internal CSS</span> — define CSS rules inside a <span
+                    style="color:maroon">&lt;style&gt;</span> tag in the
+                <span style="color:maroon">&lt;head&gt;</span> for use within the same document.
+            </li>
+            <li><span style="color:darkred">External CSS</span> — place styles in a separate <code>.css</code> file and
+                link it with
+                <span style="color:maroon">&lt;link&gt;</span> in the <span style="color:maroon">&lt;head&gt;</span>.
+            </li>
         </ul>
 
         <p>Here are some commonly used CSS properties:</p>
         <ul>
             <li><span style="color:darkred">color</span> — sets the text color.</li>
             <li><span style="color:darkred">background-color</span> — sets the element's background color.</li>
-            <li><span style="color:darkred">text-align</span> — sets horizontal alignment of text within an element.</li>
+            <li><span style="color:darkred">text-align</span> — sets horizontal alignment of text within an element.
+            </li>
             <li><span style="color:darkred">font-size</span> — sets the font size.</li>
             <li><span style="color:darkred">font-family</span> — sets the font type.</li>
             <li><span style="color:darkred">border</span> — sets border properties of an element.</li>
@@ -122,14 +137,18 @@
         <p>A few examples are shown below. The relevant snippet that deals with style is highlighted.</p>
 
         <p>An exhaustive list of CSS properties and documentation is available at the
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS Reference (MDN)</a>.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS Reference
+                (MDN)</a>.
+        </p>
         <pre class="example-box">
 &lt;p <span style="color:darkred">style="color:blue; text-align:center;"</span>&gt;This is an example of inline CSS&lt;/p&gt;
-
         </pre>
-        <p>For internal and external CSS, we will supply both the additional code and the steps to apply it. For internal
-            CSS, define rules inside a <span style="color:maroon">&lt;style&gt;</span> tag in the <span style="color:maroon">&lt;head&gt;</span>. For external CSS,
-            create a <code>.css</code> file and link it using <span style="color:maroon">&lt;link&gt;</span> in the <span style="color:maroon">&lt;head&gt;</span>. Below is an
+        <p>For internal and external CSS, we will supply both the additional code and the steps to apply it. For
+            internal
+            CSS, define rules inside a <span style="color:maroon">&lt;style&gt;</span> tag in the <span
+                style="color:maroon">&lt;head&gt;</span>. For external CSS,
+            create a <code>.css</code> file and link it using <span style="color:maroon">&lt;link&gt;</span> in the
+            <span style="color:maroon">&lt;head&gt;</span>. Below is an
             example of internal CSS.</p>
         <pre class="example-box">
 &lt;style&gt;
@@ -162,12 +181,15 @@ p {
     </pre>
 
         <p>As we can see, a CSS rule has a selector and a set of properties. Selectors can be class names (prefixed with
-            a period, e.g., <code>.my-class</code>) or IDs (prefixed with <code>#</code>, e.g., <code>#my-id</code>). Use
+            a period, e.g., <code>.my-class</code>) or IDs (prefixed with <code>#</code>, e.g., <code>#my-id</code>).
+            Use
             classes to apply the same style to multiple elements; use IDs when a unique style is needed for a single
             element.</p>
 
-        <p>Linking an external CSS document is achieved with the <span style="color:maroon">&lt;link&gt;</span> tag in the
-            <span style="color:maroon">&lt;head&gt;</span> section. Example:</p>
+        <p>Linking an external CSS document is achieved with the <span style="color:maroon">&lt;link&gt;</span> tag in
+            the
+            <span style="color:maroon">&lt;head&gt;</span> section. Example:
+        </p>
         <pre class="example-box">
 &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
         </pre>
