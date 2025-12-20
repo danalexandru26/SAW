@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>
+        CSS and more
+    </title>
+
+    <style>
+        .title-center {
+            display: block;
+            text-align: center;
+        }
+
+        .para-center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        pre.example-box {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            border: 1px solid black;
+        }
+        a{
+            text-decoration: none;
+            color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title-center" style="font-style: italic;">CSS, lists and favicons</h1>
+    <hr>
+
+    <div class="para-center">
+        <p>Many more HTML notions, tags and general good practices will be covered thorough this document. Favicon was
+            picked for a title merely because it's the shortest and most scriptically interesting term. We will bump
+            with certain simplistic CSS terminology and semantics, HTML lists(both ordered and unordered listing
+            methods) and the two great category of display tags, inline and block respectively.</p>
+
+        <h2 style="text-align: center;font-style: italic;"> HTML Lists</h2>
+
+        <p> We will start with lists because they are a pretty non-problematic and fundamental topic to cover.
+            Additionally, we've already made use of them in previous explanatory pages. As we may guess, there exist two
+            main types of lists in HTML, namely, ordered and unordered lists. The only difference between these two is
+            how the listed elements are indexed. Ordered lists count every listed item. On the other hand, unordered
+            list index elements with bullet points. Unordered and ordered lists are declared as &lt;ul&gt; and
+            &lt;ol&gt; respectively. List items are declared by using the &lt;li&gt; tag.</p>
+
+        <pre class="example-box" style="text-align: center;">
+&lt;!-- This is an unordered list --&gt;
+&lt;ul&gt;
+&lt;li&gt;First item&lt;/li&gt; 
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- This is an ordered list --&gt;
+&lt;ol&gt;
+&lt;li&gt;First item&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;
+        </pre>
+
+        <p> There is also a special type of list, called a definition list, which is used to define terms and their
+            corresponding definitions. Definition lists are declared using the &lt;dl&gt; tag, while terms and
+            definitions
+            are declared using the &lt;dt&gt; and &lt;dd&gt; tags respectively. An example of a definition list is shown
+            below.</p>
+        <pre class="example-box" style="text-align: center;">
+&lt;!-- This is a definition list --&gt;
+&lt;dl&gt;
+&lt;dt&gt;HTML&lt;/dt&gt;
+&lt;dd&gt;Hypertext Markup Language&lt;/dd&gt;
+&lt;dt&gt;CSS&lt;/dt&gt;
+&lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;
+        </pre>
+
+        <h2 style="text-align:center;font-style: italic;">A brief look into CSS</h2>
+
+        <p> We will now take a look into CSS and how we may use it to improve the aspect of our web pages. As you
+            may or may not be aware, CSS stands for <i>Cascading Style Sheets</i> and it can be quite a mouthful. It is
+            titled as cascading because the style we apply to a parent element will, in turn, be applied to all of
+            associated children. A simple example can be seen in this very document, where a basic CSS style was
+            used to center the text elements of the webpage. We can perform much more interesting and flavorful changes
+            to the style of our page that relate, but are not limited to text alignment, text color(both background and
+            foreground), element borders and element dimensions.</p>
+        <h2 style="text-align: center;font-style: italic;">Using CSS</h2>
+
+        <p>There are three main ways to use CSS in an HTML document, namely, the following.</p>
+        <ul>
+            <li><span style="color:darkred">Inline CSS</span> - used to apply style to a single element by using the
+                style attribute within that element's
+                tag.</li><br>
+            <li><span style="color:darkred">Internal CSS</span> - used to apply style to multiple elements within the
+                same HTML document by using the
+                &lt;style&gt; tag within the &lt;head&gt; section of the document.</li><br>
+            <li><span style="color:darkred">External CSS</span> - used to apply style to multiple HTML documents by
+                linking an external CSS file using the
+                &lt;link&gt; tag within the &lt;head&gt; section of the document.</li>
+        </ul>
+
+        <p>There are many CSS style options we can use to alter the aspect of our webpages. A collection of the most
+            frequently encountered options is listed below.</p>
+        <ul>
+            <li><span style="color:darkred">color</span> - used to set the foreground color of text.</li><br>
+            <li><span style="color:darkred">background-color</span> - used to set the background color of an element.
+            </li><br>
+            <li><span style="color:darkred">text-align</span> - used to set the horizontal alignment of text within an
+                element.</li><br>
+            <li><span style="color:darkred">font-size</span> - used to set the size of the font.</li><br>
+            <li><span style="color:darkred">font-family</span> - used to set the font type.</li><br>
+            <li><span style="color:darkred">border</span> - used to set the border properties of an element.</li><br>
+            <li><span style="color:darkred">width</span> - used to set the width of an element.</li><br>
+            <li><span style="color:darkred">height</span> - used to set the height of an element.</li><br>
+            <p>A few examples will be attached below in the form of raw text. The relevant snippet that deals with style
+                is
+                highlighted.</p>
+
+            <p>An exhaustive list of CSS properties and affiliated documentation can be found by clicking on the
+                following hyperlink <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"
+                    target="_blank">CSS
+                    Reference</a></p>
+            <pre class="example-box">
+
+&lt;p <span style="color:darkred">style="color:blue; text-align:center;"</span>&gt;This is an example of inline CSS&lt;/p&gt;
+
+        </pre>
+            <p>For internal and external CSS, we will supply both the additional code and what we have to do in order to
+                apply its style to our tags. Regarding internal CSS, we are required to define the CSS rules within the
+                &lt;style&gt; tag in the &lt;head&gt; section of the document. For external CSS, we must create a
+                separate
+                .css file and link it to our HTML document using the &lt;link&gt; tag in the &lt;head&gt; section. Below
+                we
+                can find an example of how internal CSS is defined. External definitions are very similar, the only
+                difference being that external CSS is defined in a separate file and linked, as has been specified.</p>
+            <pre class="example-box">
+&lt;style&gt;
+<span style="color:darkred">
+.title-center {
+    display: block;
+    text-align: center;
+}
+
+.para-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+pre.example-box {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border: 1px solid black;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+</span>
+&lt;/style&gt;
+    </pre>
+
+            <p>As we can see in the above example, the CSS style is defined by a name and several properties. The name
+                is
+                used to reference the style in the HTML document, while the properties define how the element should be
+                displayed. There exist two main methods of naming our CSS styles. One of them is the use of class names,
+                which are defined by a period (.) followed by the name of the class. The other method is the use of ID
+                names, which are defined by a hash (#) followed by the name of the ID. Naming CSS styles using a class
+                attribute allows us to apply the same style to multiple elements, while naming them using an ID
+                attribute
+                allows us to apply a unique style to a single element.</p>
+
+            <p>Linking an external CSS document is achieved with the &lt;link&gt; tag in the &lt;head&gt; section of the
+                HTML, likeso.</p>
+            <pre class="example-box">
+&lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
+        </pre>
+    </div>
+
+</body>
+
+
+</html>
