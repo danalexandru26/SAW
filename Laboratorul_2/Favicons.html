@@ -95,7 +95,11 @@
                 style="color:maroon">&lt;p&gt;</span>.</p>
         <p>Inline elements, on the other hand, are only as wide as their content and do not force line breaks. The most
             common inline elements are <span style="color:maroon">&lt;span&gt;</span> and <span
-                style="color:maroon">&lt;a&gt;</span>.</p>
+                style="color:maroon">&lt;a&gt;</span>. They are often used to color text elements that are components of
+            paragraphs, such a use can be seen in the previous sentence.</p>
+
+        <p>For a thorough list of both inline and block elements, please consult the HTML documentation. <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">MDN docs.</a></p>
 
         <h2 style="text-align:center;font-style: italic;">A brief look into CSS</h2>
 
@@ -110,7 +114,8 @@
         <p>There are three main ways to use CSS in an HTML document:</p>
         <ul>
             <li><span style="color:darkred">Inline CSS</span> — apply style to a single element using the
-                <code>style</code> attribute.</li>
+                <code>style</code> attribute.
+            </li>
             <li><span style="color:darkred">Internal CSS</span> — define CSS rules inside a <span
                     style="color:maroon">&lt;style&gt;</span> tag in the
                 <span style="color:maroon">&lt;head&gt;</span> for use within the same document.
@@ -149,7 +154,8 @@
                 style="color:maroon">&lt;head&gt;</span>. For external CSS,
             create a <code>.css</code> file and link it using <span style="color:maroon">&lt;link&gt;</span> in the
             <span style="color:maroon">&lt;head&gt;</span>. Below is an
-            example of internal CSS.</p>
+            example of internal CSS.
+        </p>
         <pre class="example-box">
 &lt;style&gt;
 .title-center {
@@ -193,6 +199,17 @@ p {
         <pre class="example-box">
 &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
         </pre>
+        <h2 style="text-align: center;font-style: italic;">Favicons</h2>
+        <p>At last, we will cover favicons and their use. First things first, a favicon is the miniature icon or image
+            that is displayed in the tab's title. Similarly to how we may link a CSS style file to our HTML document, we
+            use a favicon by referencing a file name in the link tag. An example of favicon usage can be found below.
+        </p>
+        <pre class="example-box">
+&lt;link rel="icon" type="image/png" href="favicon.png"&gt;
+        </pre>
+        <p>Favicons can be in various formats, such as PNG, ICO, or SVG. The <code>type</code> attribute specifies the
+            image format, while the <code>href</code> attribute points to the favicon file's location. It's common
+            practice to place the favicon file in the root directory of your website for easy access.</p>
     </div>
 
 </body>
