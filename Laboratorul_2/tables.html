@@ -150,6 +150,13 @@
 
 <span style="color:maroon;">border-collapse:</span> collapse;
         </pre>
+            <li>In order to alternate the color of our table rows we do the following:</li>
+            <pre>
+
+tr:<span style="color:maroon;">nth-child(even)</span> {
+    background-color: #f2f2f2;
+}
+    </pre>
         </ul>
         <p>We have an example of an uncollapsed table right down below. Notice how all the cells have distinct and well
             defined borders. In the end, the style of your table will be a trade off between data readability and
@@ -192,7 +199,9 @@
 &lt;h1 id="headerStyle1"&gt;
     </pre>
 
-        <p> In order to define a style that is to be used for only a specific ID, we shall use the syntax described below. Notice the <code>#</code> prefixed before the style name proper. It signifies that this style is to be used for the element assigned to the ID that bears the same name.</p>
+        <p> In order to define a style that is to be used for only a specific ID, we shall use the syntax described
+            below. Notice the <code>#</code> prefixed before the style name proper. It signifies that this style is to
+            be used for the element assigned to the ID that bears the same name.</p>
         <pre>
 
 &lt;style&gt;
