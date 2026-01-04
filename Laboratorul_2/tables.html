@@ -20,6 +20,44 @@
             font-style: italic;
             text-align: center;
         }
+
+        code {
+            color: maroon;
+        }
+
+        pre {
+            display: block;
+            border: 1px solid black;
+            padding: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table.uncollapsed {
+            border-collapse: separate;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
     </style>
 </head>
 
@@ -37,6 +75,135 @@
             introduction to more advanced web development and design concepts such as the use of javascript and CSS.
         </p>
         <h2 class="title-style">Tables</h2>
+        <p>Tables serve as the primary mode of data display in a variety of fields. They have become a term that's
+            virtually interchangeable with data engineering and analysis. Because of this fact, learning to declare and
+            properly use tables is an ability as important as it is easy to develop. The content that follows in this
+            section will describe the proper way of table instantiation, styling and use.</p>
+        <p>In order to declare a table, we shall use the <code>&lt;table&gt;</code> tag. The subsequent tags that will
+            instantiate the content rows and headers are in succession the following: <code>&lt;tr&gt;</code>,
+            <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>. They stand for table row, table header and table data
+            respectively. Below, we can find a sample example of how a table is declared.
+        </p>
+        <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+    &lt;th&gt;City&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Alice&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+        &lt;td&gt;New York&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Bob&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;Los Angeles&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+        <p> As any other HTML tags, tables can also be suject to CSS stylistic modifications. Several examples of table
+            tinkering will be presented, in-page, down below.</p>
+        <table>
+            <tr>
+                <th>Manufacturer</th>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Corsair</td>
+                <td>Corsair Vengeance 32GB DDR5 6000MHz CL30 Dual Channel Kit</td>
+                <td>2.500 RON</td>
+            </tr>
+            <tr>
+                <td>G.Skill</td>
+                <td>G.Skill Trident Z5 RGB 32GB DDR5 6400MHz CL32 Dual Channel Kit</td>
+                <td>2.700 RON</td>
+            </tr>
+            <td>Kingston</td>
+            <td>Kingston FURY Beast 32GB DDR5 6000MHz CL40 Dual Channel Kit</td>
+            <td>2.300 RON</td>
+            </td>
+        </table>
+
+        <p> There are several CSS style options that were used to properly display our table and the data therein.
+            Without any stylistic modifications, the table will be raw, unbordered and devoid of any visual
+            enhancements. The CSS options that were used to aid in displaying our table are as follows:</p>
+        <ul>
+            <li>Borders are defined using the <code>border</code> style option.</li>
+            <pre>
+
+<span style="color:maroon;">border</span>: 1px solid black;
+            </pre>
+            <li>The padding that sits between the text's extremities and the table cell's border are defined with the
+                <code>padding</code> attribute.
+            </li>
+            <pre>
+
+<span style="color:maroon;">padding</span>: 10px;
+        </pre>
+            <li> How the borders of our table cell function is controlled by the <code>border-collapse</code> attribute.
+                The individual cell borders will collapse when using this attribute with the <code>collapse</code>
+                option, giving our table an unified centralized look.</li>
+            <pre>
+
+<span style="color:maroon;">border-collapse:</span> collapse;
+        </pre>
+        </ul>
+        <p>We have an example of an uncollapsed table right down below. Notice how all the cells have distinct and well
+            defined borders. In the end, the style of your table will be a trade off between data readability and
+            stylistic taste. I would personally opt for a more data-centered minimally styled table. For more in-depth
+            information on tables please access the folllwing hyperlink, <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table" target="_blank"
+                style="color:maroon;text-decoration: none;">MDN Tables.</a>
+        </p>
+        <table class="uncollapsed">
+            <tr>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Publishing Year</th>
+            </tr>
+            <tr>
+                <td>Dune</td>
+                <td>Frank Herbert</td>
+                <td>1965</td>
+            </tr>
+            <tr>
+                <td>A Game of Thrones</td>
+                <td>George R.R. Martin</td>
+                <td>1996</td>
+            </tr>
+            <td>A Wizard of Earthsea</td>
+            <td>Ursula K. Le Guin</td>
+            <td>1968</td>
+            </td>
+        </table>
+
+
+        <h2 class="title-style">IDs and their usage</h2>
+
+        <p>IDs are unique identifiers for specific elements on our web page. IDs allow us to exercise fine grained
+            control on how certain tags are displayed and addressed. In addition, by using these identifiers, we are
+            enabled to transform our page in a more interactive manner through the use of javascript snippets. IDs are
+            declared by using the <code>id</code> attribute.</p>
+        <pre>
+
+&lt;h1 id="headerStyle1"&gt;
+    </pre>
+
+        <p> In order to define a style that is to be used for only a specific ID, we shall use the syntax described below. Notice the <code>#</code> prefixed before the style name proper. It signifies that this style is to be used for the element assigned to the ID that bears the same name.</p>
+        <pre>
+
+&lt;style&gt;
+    #headerStyle1{
+        display: block;
+        text-align: center;
+    }
+&lt;style&gt;
+        </pre>
+        <p>Identifiers can also be useful in controlling certain HTML forms items, but this will be addressed in another
+            document.</p>
     </div>
 </body>
 
