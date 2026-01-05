@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="images/icons/planet.png">
+    <title>
+        Forms and buttons
+    </title>
+    <style>
+        h1 {
+            display: block;
+            width: 50%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+        }
+
+        h2 {
+            font-style: italic;
+            text-align: center;
+        }
+
+        div.center_div {
+            display: block;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.button_div {
+            display: block;
+            margin-left: auto;
+            margin-right: 65px;
+            width: 50%;
+
+        }
+
+        hr {
+            width: 50%;
+        }
+
+        code {
+            color: maroon;
+        }
+
+        pre {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            border: 1px solid black;
+        }
+
+        button {
+            font-size: 15px;
+            transition-duration: 1s;
+        }
+
+        button.exampleButton {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button.buttonStyleA {
+            cursor: pointer;
+            border: 1px solid maroon;
+            background-color: white;
+            padding: 10px;
+            text-decoration: none;
+
+        }
+
+        button.buttonStyleB {
+            cursor: wait;
+            border: 1px solid blueviolet;
+            background-color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        button.buttonStyleA:hover {
+            background-color: maroon;
+            color: white;
+        }
+
+
+        button.buttonStyleB:hover {
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+</head>
+<h1> Forms and Interactables</h1>
+<hr>
+
+<body><br>
+    <div class="center_div">
+        <h2>Prelude</h2>
+        <p>This document will teach us on what forms and interactables are and how we may use them to enhance the user
+            experience. Furthermore, it will be presented why and how forms represent the principal method of web-page
+            user data acquisition. It is through forms that a user may interact with the data acquisition and processing
+            mechanisms that sit behind the front of our web-page. It is forms precisely that we encounte whenever a
+            web-site prompts us to commit our data for various purposes such as payment procedures, registration and so
+            much more.</p>
+
+        <p>It is also wise to view forms as compound structures that achieve their role through the use of various
+            interactable objects. These interactable objects are HTML items a user will interact with, such as buttons,
+            drop-down lists and text boxes. In order to study and then use forms we first have to some of the most
+            important objects we can make use of. This is precisely what the following chapters will try to achieve.</p>
+
+        <h2> Buttons and text boxes</h2>
+        <p>Buttons are relatively simple structures with some interesting fiels we'll go over. A button can be declared
+            by using the <code>button</code> tag.</p>
+        <pre>
+
+&lt;<span style="color:maroon">button</span>&gt; Press Me
+        </pre>
+        <p>The result of this tag can be seen below, it's quite simple.</p>
+        <button class="exampleButton"> Press Me</button>
+        <p>There are many CSS style options specific to buttons that we may use in improving their style, such as:</p>
+        <ul>
+            <li><code>button.buttonClass:hover</code> defines what shall occur when our cursor hovers over the button.
+            </li>
+            <li><code>transition-duration</code> defines how long it takes for our button to change color as specified
+                in the hover property.</li>
+            <li><code>cursor</code> defines how our cursor will look when the mouse hovers over the button's box. There
+                are many options, such as <code>auto, pointer, default, move, not-allowed</code> and several others.
+            </li>
+        </ul>
+
+        <div class="button_div">
+            <button class="buttonStyleA">Style A</button>
+            <button class="buttonStyleB">Style B</button>
+        </div>
+
+        <p>We can see the effects and their length of duration by hovering over the buttons above. In the context of
+            forms, there is another attribute of buttons that we may use. That is, the button <code>type</code> option.
+            It has two possible values, <code>submit</code> and <code>reset</code>. Reset may be used to clear the set
+            context of the form's data fields while submit is generally used to submit the personalized data to a
+            back-end processing pipeline, however simple.</p>
+
+        <h2>Forms and Inputs</h2>
+        <p>As has been elaborated before, forms are no more than entities defined by the sum of their interactable
+            components.
+            These components bear the name of inputs and they can be of many types, as follows:</p>
+
+        <ul>
+            <li><code>&lt;input type="text"&gt;</code> are the basic elements for raw text submissions, regardless of
+                any
+                format unless so enformed by the back-end or through web-page scripts.</li>
+            <li><code>&lt;label&gt;</code> is an element with a fixed descriptive function, used for the
+                annotation of other interactables.</li>
+            <li><code>&lt;input type="radio"&gt;</code> is a multiple option and (generally) single choice submission
+                data acquisition input.</li>
+            <li><code>&lt;input type="checkbox"&gt;</code> is generally used to answer questions that have well defined
+                and fixed options.</li>
+            <li><code>&lt;input type="submit"&gt;</code> is a button used for form submission.</li>
+            <li><code>&lt;input type="button"&gt;</code> is a general button that can serve many functions, often times
+                it can even be used to generate in-page pop-up secondary forms.</li>
+        </ul>
+
+        <form style="text-align: center;">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="nameBox"><br>
+
+            <label for="iCountry">Country</label><br>
+            <input type="text" name="iCountry" id="countryBox"><br><br>
+
+            <input type="submit" name="submitButton" id="sButton1"><br><br>
+            <input type="reset" name="resetButton" id="rButton1"><br>
+        </form>
+
+        <p>Out of these two button interactables only the function of the reset button can be observed. The submit
+            button has no real back-end toward which to publish the data and as such nothing of relevance will happen.
+            It's also worth noting that this form is extremely minimalistic and by no means is it a representative
+            example for all that can be achieved. However, it does serve as a useful proof of concept. After all, forms
+            are nothing more but slightly sophisticated tools of user data acqusition. For more information on forms
+            please access the well-known <em>MDN</em> trove of information here: <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form" target="_blank"
+                style="color:maroon;text-decoration: none;">MDN Forms.</a>
+        </p>
+    </div>
+</body>
+
+</html>
