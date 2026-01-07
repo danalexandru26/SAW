@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <title>Data Model Definition</title>
-    <link rel="icon" type="image/png" href="images/icons/planet.png">
+    <link rel="icon" type="image/png" href="../images/icons/planet.png">
     <style>
         div.center_div {
             width: 50%;
@@ -25,9 +25,28 @@
             color: maroon;
         }
     </style>
-
     <script>
+        function updateForm() {
+            var shipCategory = document.getElementById("shipCategory").value;
+            // Further dynamic form updates can be implemented here based on shipCategory
+            if (!shipCategory) return;
 
+            if (shipCategory == "civilian") {
+                var options = ['Fuel Tankers', 'Civilian Transport Vessels', 'Cargo Freighters'];
+            } else if (shipCategory == "military") {
+                var options = ['Fighters', 'Corvettes', 'Frigates', 'Destroyers', 'Cruisers', 'Carriers'];
+            }
+
+            var select = document.getElementById("selectShipType");
+            select.innerHTML = "";
+
+            options.forEach(function (option) {
+                var opt = document.createElement('option');
+                opt.value = option.toLowerCase().replace(/ /g, '_');
+                opt.innerHTML = option;
+                select.appendChild(opt);
+            });
+        }
     </script>
 </head>
 
@@ -118,8 +137,50 @@
         </ul>
         <p>Before using <em>Bootstrap</em> and all the styles and options the library can offer, let's design a crude
             form for the data model defined above.</p>
-        <form>
+        <form style="text-align:center">
+            <label for="Ship Category">Ship Category:</label><br>
+            <select id="shipCategory" name="shipCategory" onchange="updateForm()">
+                <option value="civilian">Civilian</option>
+                <option value="military">Military</option>
+            </select> <br><br>
 
+            <label for="shipType">Ship Type:</label><br>
+            <select id="selectShipType" name="shipType">
+
+                <label for="Hull Strength">Hull Strength (absorption):</label><br>
+                <input type="number" id="hullStrength" name="hullStrength"><br><br>
+
+                <label for="ShieldCapacity">Shield capacity (flux):</label><br>
+                <input type="number" id="ShieldCapacity" name="shieldCapacity"><br><br>
+
+                <label for="CargoHoldCapacity">Cargo hold capacity (containers):</label><br>
+                <input type="number" id="CargoHoldCapacity" name="cargoHoldCapacity"><br><br>
+
+                <label for="LiquidFuelCapacity">Liquid Fuel Capacity [tonnes]:</label><br>
+                <input type="number" id="LiquidFuelCapacity" name="liquidFuelCapacity"><br><br>
+
+                <label for="ServiceCrew">Service Crew:</label><br>
+                <input type="number" id="ServiceCrew" name="serviceCrew"><br><br>
+
+                <label for="Marines">Marines (if applicable):</label><br>
+                <input type="number" id="Marines" name="marines"><br><br>
+
+                <label for="WeaponryOutput">Weaponry output (mass/sec):</label><br>
+                <input type="number" id="WeaponryOutput" name="weaponryOutput"><br><br>
+
+                <label for="Hardpoints">Hardpoints (qn):</label><br>
+                <input type="number" id="Hardpoints" name="hardpoints"><br><br>
+
+                <label for="TravelSpeed">Travel Speed (km/s):</label><br>
+                <input type="number" id="TravelSpeed" name="travelSpeed"><br><br>
+
+                <label for="Thrust">Thrust (N):</label><br>
+                <input type="number" id="Thrust" name="thrust"><br><br>
+
+                <label for="Hyperspeed">Hyperspeed (ly/ys):</label><br>
+                <input type="number" id="Hyperspeed" name="hyperspeed"><br><br>
+
+                <input type="submit" value="Submit">
         </form>
     </div>
 </body>
