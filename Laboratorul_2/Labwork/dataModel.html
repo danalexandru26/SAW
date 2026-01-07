@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Data Model Definition</title>
+    <link rel="icon" type="image/png" href="images/icons/planet.png">
+    <style>
+        div.center_div {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            text-align: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+        }
+
+        li.nestedType {
+            color: maroon;
+        }
+    </style>
+
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div class="center_div">
+        <h1>Data Model Definition</h1>
+        <hr>
+        <p>The object we will be working with is the abstract representation of interstellar spaceships. We will define
+            multiple types of spaceships and the relevant data fields that are used to properly describe them to the
+            desired granularity.</p>
+
+        <p>First of all, there will be two broad types of ships: <span class="nestedType">Civilian</span> and
+            <span class="nestedType">Military</span>. Civilian ships, like their real-world analogues, are focused on
+            transport of organic and inorganic goods (legal or contraband). Military ships are used for law enforcement
+            and, when required, combat.
+        </p>
+
+        <ul>
+            <li>Ship Types
+                <ul>
+                    <li class="nestedType" id="civShips">Civilian</li>
+                    <li class="nestedType" id="milShips">Military</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p>Both civilian and military ships can be separated into sub-categories based on their characteristics and
+            roles. The following are common sub-categories:</p>
+
+        <ul>
+            <li>Civilian Ships
+                <ul>
+                    <li class="nestedType">Fuel Tankers</li>
+                    <li class="nestedType">Civilian Transport Vessels</li>
+                    <li class="nestedType">Cargo Freighters</li>
+                </ul>
+            </li>
+            <li>Military Ships
+                <ul>
+                    <li class="nestedType">Fighters</li>
+                    <li class="nestedType">Corvettes</li>
+                    <li class="nestedType">Frigates</li>
+                    <li class="nestedType">Destroyers</li>
+                    <li class="nestedType">Cruisers</li>
+                    <li class="nestedType">Carriers</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p>Now that categories are defined, let's discuss the data fields used to describe these ships. The most
+            significant fields are:</p>
+
+        <ul>
+            <li>Name - <span style="color:maroon">string</span></li>
+            <li>Hull characteristics
+                <ul>
+                    <li>Hull strength [absorption] - <span style="color:maroon">uint32</span></li>
+                    <li>Shield capacity [flux] - <span style="color:maroon">int64</span></li>
+                </ul>
+            </li>
+            <li>Cargo characteristics
+                <ul>
+                    <li>Cargo hold capacity [containers] - <span style="color:maroon">uint32</span></li>
+                    <li>Liquid fuel capacity [tonnes] - <span style="color:maroon">uint32</span></li>
+                </ul>
+            </li>
+            <li>Crew quarters
+                <ul>
+                    <li>Service Crew - <span style="color:maroon">uint16</span></li>
+                    <li>Marines (if applicable) - <span style="color:maroon">uint16</span></li>
+                </ul>
+            </li>
+            <li>Armament
+                <ul>
+                    <li>Weaponry output [mass/sec] - <span style="color:maroon">uint32</span></li>
+                    <li>Hardpoints [num] - <span style="color:maroon">uint16</span></li>
+                </ul>
+            </li>
+            <li>Engine
+                <ul>
+                    <li>Travel Speed [<span style="color:maroon">km/s</span>] - <span style="color:maroon">int64</span>
+                    </li>
+                    <li>Thrust [<span style="color:maroon">N</span>] - <span style="color:maroon">uint64</span></li>
+                    <li>Hyperspeed [<span style="color:maroon">ly/ys</span>] - <span style="color:maroon">uint32</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>Before using <em>Bootstrap</em> and all the styles and options the library can offer, let's design a crude
+            form for the data model defined above.</p>
+        <form>
+
+        </form>
+    </div>
+</body>
+
+</html>
