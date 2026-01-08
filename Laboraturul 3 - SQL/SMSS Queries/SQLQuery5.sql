@@ -1,4 +1,3 @@
-
 use SQL_Tutorials;
 
 IF OBJECT_ID('dbo.shipyard', 'U') is not null DROP TABLE shipyard;
@@ -50,9 +49,17 @@ VALUES('ISS Serenity', 'civilian', 'passenger', 2500, 1200, 5000, 90000, 80, 0, 
 
 SELECT * FROM shipyard;
 
+--Query selects a specific column
+
+SELECT shipName FROM shipyard;
+
+--Query selects a composition of multiple columns
+
+SELECT shipName, shipType, shipClass FROM shipyard;
+
 --Query is conditional to service crew count
 
-SELECT * FROM shipyard where serviceCrew >= 150;
+SELECT * FROM shipyard WHERE serviceCrew >= 150;
 
 --Query is conditional to total crew count
 
@@ -62,8 +69,52 @@ SELECT * FROM shipyard WHERE (serviceCrew + marines) >= 200;
 
 --military ships
 
-SELECT * FROM shipyard where shipType = 'military';
+SELECT * FROM shipyard WHERE shipType = 'military';
 
 --civilian ships
 
-SELECT * FROM shipyard where shipType = 'civilian';
+SELECT * FROM shipyard WHERE shipType = 'civilian';
+
+--select distinct ship classes
+
+SELECT DISTINCT shipClass FROM shipyard;
+
+--where can be restrained by certain conditions that are unlike classical operators: between, like, in
+
+SELECT * FROM shipyard WHERE shipName in ('ISS Titan', 'ISS Voyager');
+
+SELECT * FROM shipyard WHERE marines BETWEEN 10 AND 30; 
+
+--Query to select a ship whose name ends in the 'an' suffix
+
+SELECT * FROM shipyard WHERE shipName LIKE '%an';
+
+--Query to select a ship whose name starts with the 'ne' prefix;
+
+SELECT * FROM shipyard	WHERE shipname LIKE 'ISS Ne%';
+
+--A combination of column selecting queries and compound where statements
+
+SELECT shipName, shipType, shipClass, fuelCapacity FROM shipyard WHERE serviceCrew + marines BETWEEN 100 and 250;
+
+--Order by statements (increasing ordering criterion is the default)
+
+--Strong increasing ordering
+
+SELECT * FROM shipyard ORDER BY serviceCrew;
+
+--Strong decreasing ordering
+
+SELECT * FROM shipyard ORDER BY marines DESC;
+
+--Strong specified increasing ordering
+
+SELECT * FROM shipyard order by fuelCapacity ASC;
+
+--Ordering by two different columns
+
+SELECT * FROM shipyard ORDER BY shipName ASC, fuelCapacity DESC;
+
+--compound statement 
+
+SELECT shipName, shipType, shipClass FROM shipyard WHERE serviceCrew + marines < 100 ORDER BY fuelCapacity ASC, serviceCrew+marines DESC;
